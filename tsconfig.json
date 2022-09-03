@@ -1,5 +1,27 @@
 {
   "compilerOptions": {
+    "types": [
+      "jest",
+      "@testing-library/jest-dom"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "utils/*": [
+        "src/utils/*"
+      ],
+      "components/*": [
+        "src/components/*"
+      ],
+      "apis/*": [
+        "src/apis/*"
+      ],
+      "hooks/*": [
+        "src/hooks/*"
+      ],
+      "store/*": [
+        "src/store/*"
+      ]
+    },
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": [
