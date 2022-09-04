@@ -1,16 +1,15 @@
-import './App.css'
-
+import style from './App.module.less'
+import { MyButton } from './components'
+import './index.css'
 function App() {
   return (
     <div>
-      <div></div>
-      <div>
-        asd
-      </div>
-
-      <div className="App text-3xl">
+      <div className="text-3xl" >
         123123
       </div>
+      <MyButton />
+      <div className={style.logo}>123</div>
+
     </div>
 
   )
