@@ -10,6 +10,7 @@ module.exports = {
     extend: {},
   },
   corePlugins: {
+    // https://tailwindcss.com/docs/preflight
     preflight: false,
   },
   plugins: [],
