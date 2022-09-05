@@ -1,9 +1,11 @@
 import type { FC } from 'react'
+import { useRoutes } from 'react-router-dom'
+import { routeConfig } from './routes'
 
 const App: FC = () => {
   return (
-    <div className="text-3xl" >
-        TailWind CSS
+    <div>
+      {useRoutes(routeConfig)}
     </div>
   )
 }
