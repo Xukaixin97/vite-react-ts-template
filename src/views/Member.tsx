@@ -1,5 +1,4 @@
 import type { FC } from 'react'
-import { useUrlSearchParams } from '@/hooks'
 
 interface IProps {}
 const Home: FC<IProps> = () => {

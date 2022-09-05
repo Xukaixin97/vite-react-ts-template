@@ -3,10 +3,10 @@
     "types": [
       "jest"
     ],
-    "baseUrl": "src",
+    "baseUrl": "./",
     "paths": {
       "@/*": [
-        "./*"
+        "src/*"
       ]
     },
     "target": "ESNext",
@@ -31,6 +31,11 @@
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "cypress"
   ],
   // https://www.typescriptlang.org/docs/handbook/project-references.html
   "references": [
