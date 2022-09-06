@@ -4,7 +4,6 @@ import { Link, Outlet } from 'react-router-dom'
 interface IProps {}
 const Home: FC<IProps> = () => {
   return (
-
     <div>
       <nav className="py-4 bg-purple-300">
         <Link to="member?name=cc" >

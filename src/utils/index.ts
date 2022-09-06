@@ -1,3 +1,1 @@
-export const cc = () => {
-  return 1
-}
+export {}
