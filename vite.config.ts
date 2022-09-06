@@ -1,8 +1,6 @@
 import path from 'path'
-import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-import AutoImport from 'unplugin-auto-import/vite'
-import { AntdResolve, createStyleImportPlugin } from 'vite-plugin-style-import'
+import { createVitePlugins } from './build/vite/plugin'
 
 const generateScopedName = '[local]___[hash:base64:5]'
 
@@ -13,26 +11,7 @@ export default defineConfig(
       define: {
         __DEV__: mode === 'development',
       },
-      plugins: [
-        react(),
-        AutoImport(
-          {
-            imports: [
-              'react',
-            ],
-            dts: 'src/auto-imports.d.ts',
-            dirs: [
-              'src/hooks',
-            ],
-          },
-        ),
-        // 按需加载组件样式
-        createStyleImportPlugin({
-          resolves: [
-            AntdResolve(),
-          ],
-        }),
-      ],
+      plugins: createVitePlugins(),
       css: {
         modules: {
           localsConvention: 'camelCase',
@@ -57,6 +36,7 @@ export default defineConfig(
         // pure: VITE_DROP_CONSOLE ? ['console.log', 'debugger'] : [],
         pure: ['console.log', 'debugger'],
       },
+      logLevel: 'error',
       // 上下两种方法都可以
       // build: {
       //   // https://vitejs.dev/config/build-options.html#build-minify

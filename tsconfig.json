@@ -30,17 +30,27 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "tests/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "types/**/*.d.ts",
+    "types/**/*.ts",
+    "build/**/*.ts",
+    "build/**/*.d.ts",
+    "mock/**/*.ts",
+    "vite.config.ts"
   ],
   "exclude": [
     "dist",
     "node_modules",
     "cypress"
-  ],
-  // https://www.typescriptlang.org/docs/handbook/project-references.html
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
   ]
+  // https://www.typescriptlang.org/docs/handbook/project-references.html
+  // "references": [
+  //   {
+  //     "path": "./tsconfig.node.json"
+  //   }
+  // ]
 }

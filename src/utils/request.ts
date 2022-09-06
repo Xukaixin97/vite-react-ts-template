@@ -143,7 +143,7 @@
 //     return { res: data.context } as ErrorWrap<ResponseData<T, P>>
 //   }
 //   catch (error: any) {
-//     __DEV__ && console.warn(error)
+// __DEV__ && console.warn(error)
 
 //     // // 是否加入默认 header,config 相关信息
 //     // Sentry.withScope((scope) => {
