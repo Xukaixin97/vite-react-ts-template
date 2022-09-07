@@ -1,5 +1,4 @@
 #!/bin/sh
 # . "$(dirname "$0")/_/husky.sh"
-
-# npx --no lint-staged
-# eslint ?
+# just lint staged status files, it can config in package.json by "lint-staged" property
+npx --no lint-staged

@@ -1,4 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
-
-pnpm exec commitlint --edit $1
+# npx的使用 和--no https://www.ruanyifeng.com/blog/2019/02/npx.html
+# 官网说 The --no-install option is deprecated, and will be converted to --no. 但是会报错
+npx  --no-install commitlint  --edit $1

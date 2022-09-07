@@ -5,20 +5,8 @@
     ],
     "baseUrl": "./",
     "paths": {
-      "utils/*": [
-        "src/utils/*"
-      ],
-      "components/*": [
-        "src/components/*"
-      ],
-      "apis/*": [
-        "src/apis/*"
-      ],
-      "hooks/*": [
-        "src/hooks/*"
-      ],
-      "store/*": [
-        "src/store/*"
+      "@/*": [
+        "src/*"
       ]
     },
     "target": "ESNext",
@@ -42,12 +30,27 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "tests/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "types/**/*.d.ts",
+    "types/**/*.ts",
+    "build/**/*.ts",
+    "build/**/*.d.ts",
+    "mock/**/*.ts",
+    "vite.config.ts"
   ],
-  // https://www.typescriptlang.org/docs/handbook/project-references.html
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
+  "exclude": [
+    "dist",
+    "node_modules",
+    "cypress"
   ]
+  // https://www.typescriptlang.org/docs/handbook/project-references.html
+  // "references": [
+  //   {
+  //     "path": "./tsconfig.node.json"
+  //   }
+  // ]
 }
