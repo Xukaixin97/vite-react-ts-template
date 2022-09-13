@@ -19,12 +19,13 @@
   "i18n-ally.keystyle": "nested",
   "i18n-ally.localesPaths": "locales",
   "i18n-ally.sortKeys": true,
-  "prettier.enable": true,
+  "prettier.enable": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll": true, // 可以格式化其他类型的文件
+    "source.fixAll.eslint": true, // this allows ESLint to auto fix on save
+    "source.organizeImports": false // 自动整理import
   },
   "files.associations": {
     "*.css": "postcss"
-  },
-  "editor.formatOnSave": false
+  }
 }

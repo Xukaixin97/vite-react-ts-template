@@ -21,5 +21,5 @@ declare global {
   const useState: typeof import('react')['useState']
   const useSyncExternalStore: typeof import('react')['useSyncExternalStore']
   const useTransition: typeof import('react')['useTransition']
-  const useUrlSearchParams: typeof import('./hooks/index')['useUrlSearchParams']
+  const useUrlSearchParams: typeof import('./hooks/useUrlSearchParams')['default']
 }
