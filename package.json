@@ -62,6 +62,7 @@
     "typescript": "*",
     "unplugin-auto-import": "^0.11.2",
     "vite": "^3.0.7",
+    "vite-plugin-checker": "^0.5.1",
     "vite-plugin-style-import": "^2.0.0"
   },
   "lint-staged": {
