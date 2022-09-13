@@ -9,7 +9,6 @@ const App: FC = () => {
   return (
     <div>
       {num}
-
       {useRoutes(routeConfig)}
     </div>
   )
