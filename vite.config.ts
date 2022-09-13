@@ -36,7 +36,6 @@ export default defineConfig(
         // pure: VITE_DROP_CONSOLE ? ['console.log', 'debugger'] : [],
         pure: ['console.log', 'debugger'],
       },
-      logLevel: 'error',
       // 上下两种方法都可以
       // build: {
       //   // https://vitejs.dev/config/build-options.html#build-minify
