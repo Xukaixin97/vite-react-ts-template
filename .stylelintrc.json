@@ -1,4 +1,12 @@
 {
-  "extends": "stylelint-config-standard",
-  "customSyntax": "postcss-less"
+  "customSyntax": "postcss-less",
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "ignoreFiles": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.tsx",
+    "**/*.ts"
+  ]
 }
