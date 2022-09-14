@@ -5,6 +5,11 @@ export const configAutoImportPlugin = () => AutoImport(
   {
     imports: [
       'react',
+      'ahooks',
+      'react-router-dom',
+      {
+        moment: [['default', 'moment']],
+      },
     ],
     dts: 'src/auto-imports.d.ts',
     dirs: [
