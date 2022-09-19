@@ -7,7 +7,7 @@
     "name": "macus"
   },
   "license": "MIT",
-  "homepage": "https://github.com/Xukaixin97/react-ts.gitß",
+  "homepage": "https://github.com/Xukaixin97/vite-react-ts-template",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
