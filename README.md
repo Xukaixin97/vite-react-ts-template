@@ -5,7 +5,7 @@
 
 - [X] 怎么在运行里打印出错误的eslint 和 typescript error     // add vite-plugin-checker
 - [X] stylelint
+- [X] prettier 因为主观上只想用eslint，不是很想装
 - [ ] test react-test-library
 - [ ] mock maybe try "axios-mock-adapter"
-- [ ] prettier 因为主观上只想用eslint，不是很想装
 
