@@ -9,7 +9,7 @@
   "license": "MIT",
   "homepage": "https://github.com/Xukaixin97/vite-react-ts-template",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
