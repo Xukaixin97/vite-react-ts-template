@@ -15,7 +15,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "jest",
-    "commit": "cz",
+    "commit": "./node_modules/cz-customizable/standalone.js",
     "lint:style": "stylelint --fix \"src/**/*.less\" ",
     "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite"
   },
