@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom'
 
-const useUrlSearchParams = <T> (key: string, isAll?: boolean) => {
+function useUrlSearchParams<T>(key: string, isAll?: boolean) {
   const [searchParams] = useSearchParams()
   // const params = [...searchParams].map(([key, value]) => ({
   //   [key]: value,

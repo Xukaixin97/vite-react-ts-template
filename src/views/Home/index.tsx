@@ -10,7 +10,7 @@ const Home: FC<IProps> = () => {
     <div>
       <nav className="py-4 bg-purple-300">
         <div>{now}</div>
-        <Link to="member?name=cc" >
+        <Link to="member?name=cc">
           <div className="text-red-800">member</div>
         </Link>
       </nav>

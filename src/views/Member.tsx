@@ -6,7 +6,10 @@ const Home: FC<IProps> = () => {
   return (
 
     <div>
-      <div>Hello {name}</div>
+      <div>
+        Hello
+        {name}
+      </div>
     </div>
   )
 }

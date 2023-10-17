@@ -40,34 +40,27 @@ axios.interceptors.response.use(
   },
 )
 
-export const Get = <T>(
-  url: string,
-  params: IAnyObj = {},
-  clearFn?: Fn,
-): Promise<[any, FcResponse<T> | undefined]> =>
-    new Promise((resolve) => {
-      axios
-        .get(url, { params })
-        .then((result) => {
-          let res: FcResponse<T>
-          if (clearFn !== undefined)
-            res = clearFn(result.data) as unknown as FcResponse<T>
+export function Get<T>(url: string, params: IAnyObj = {}, clearFn?: Fn): Promise<[any, FcResponse<T> | undefined]> {
+  return new Promise((resolve) => {
+    axios
+      .get(url, { params })
+      .then((result) => {
+        let res: FcResponse<T>
+        if (clearFn !== undefined)
+          res = clearFn(result.data) as unknown as FcResponse<T>
 
-          else
-            res = result.data as FcResponse<T>
+        else
+          res = result.data as FcResponse<T>
 
-          resolve([null, res as FcResponse<T>])
-        })
-        .catch((err) => {
-          resolve([err, undefined])
-        })
-    })
+        resolve([null, res as FcResponse<T>])
+      })
+      .catch((err) => {
+        resolve([err, undefined])
+      })
+  })
+}
 
-export const Post = <T>(
-  url: string,
-  data: IAnyObj,
-  params: IAnyObj = {},
-): Promise<[any, FcResponse<T> | undefined]> => {
+export function Post<T>(url: string, data: IAnyObj, params: IAnyObj = {}): Promise<[any, FcResponse<T> | undefined]> {
   return new Promise((resolve) => {
     axios
       .post(url, data, { params })

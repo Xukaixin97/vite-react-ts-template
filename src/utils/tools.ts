@@ -1,16 +1,16 @@
 import { message } from 'antd'
 
-export const handleChangeRequestHeader = (config: any) => {
+export function handleChangeRequestHeader(config: any) {
   config.xxxx = 'xxx'
   return config
 }
 
-export const handleConfigureAuth = (config: any) => {
+export function handleConfigureAuth(config: any) {
   config.headers.token = localStorage.getItem('token') || ''
   return config
 }
 
-export const handleNetworkError = (errStatus?: number): void => {
+export function handleNetworkError(errStatus?: number): void {
   const networkErrMap: any = {
     400: '错误的请求', // token 失效
     401: '未授权，请重新登录',
@@ -33,7 +33,7 @@ export const handleNetworkError = (errStatus?: number): void => {
   message.error('无法连接到服务器！')
 }
 
-export const handleAuthError = (errno: string): boolean => {
+export function handleAuthError(errno: string): boolean {
   const authErrMap: any = {
     10031: '登录失效，需要重新登录', // token 失效
     10032: '您太久没登录，请重新登录~', // token 过期
@@ -55,7 +55,7 @@ export const handleAuthError = (errno: string): boolean => {
   return true
 }
 
-export const handleGeneralError = (errno: string, errmsg: string): boolean => {
+export function handleGeneralError(errno: string, errmsg: string): boolean {
   if (errno !== '0') {
     message.error(errmsg)
     return false

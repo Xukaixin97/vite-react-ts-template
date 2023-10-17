@@ -2,6 +2,7 @@ import react from '@vitejs/plugin-react'
 import type { PluginOption } from 'vite'
 import { configAutoImportPlugin } from './autoImport'
 import { configStyleImportPlugin } from './styleImport'
+
 import { configChecker } from './checker'
 
 export function createVitePlugins() {
