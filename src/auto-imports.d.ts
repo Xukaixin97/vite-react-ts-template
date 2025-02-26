@@ -12,6 +12,7 @@ declare global {
   const Route: typeof import('react-router-dom')['Route']
   const Routes: typeof import('react-router-dom')['Routes']
   const createRef: typeof import('react')['createRef']
+  const dayjs: typeof import('moment')['default']
   const forwardRef: typeof import('react')['forwardRef']
   const lazy: typeof import('react')['lazy']
   const memo: typeof import('react')['memo']

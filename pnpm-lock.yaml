@@ -17,6 +17,9 @@ importers:
       axios:
         specifier: ^1.7.2
         version: 1.7.2
+      dayjs:
+        specifier: ^1.11.13
+        version: 1.11.13
       moment:
         specifier: ^2.30.1
         version: 2.30.1
@@ -1878,11 +1881,8 @@ packages:
     resolution: {integrity: sha512-t/Ygsytq+R995EJ5PZlD4Cu56sWa8InXySaViRzw9apusqsOO2bQP+SbYzAhR0pFKoB+43lYy8rWban9JSuXnA==}
     engines: {node: '>= 0.4'}
 
-  dayjs@1.11.11:
-    resolution: {integrity: sha512-okzr3f11N6WuqYtZSvm+F776mB41wRZMhKP+hc34YdW+KmtYYK9iqvHSwo2k9FEH3fhGXvOPV6yz2IcSrfRUDg==}
-
-  dayjs@1.11.5:
-    resolution: {integrity: sha512-CAdX5Q3YW3Gclyo5Vpqkgpj8fSdLQcRuzfX6mC6Phy0nfJ0eGYOeS7m4mt2plDWLAtA4TqTakvbboHvUxfe4iA==}
+  dayjs@1.11.13:
+    resolution: {integrity: sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==}
 
   debug@3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
@@ -5686,7 +5686,7 @@ snapshots:
       '@types/node': 20.5.1
       chalk: 4.1.2
       cosmiconfig: 8.1.3
-      cosmiconfig-typescript-loader: 4.0.0(@types/node@20.5.1)(cosmiconfig@8.1.3)(ts-node@10.9.1(@types/node@20.5.1)(typescript@5.4.5))(typescript@5.4.5)
+      cosmiconfig-typescript-loader: 4.0.0(@types/node@20.5.1)(cosmiconfig@8.1.3)(ts-node@10.9.1(@types/node@18.7.14)(typescript@5.4.5))(typescript@5.4.5)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -5707,7 +5707,7 @@ snapshots:
       '@types/node': 20.5.1
       chalk: 4.1.2
       cosmiconfig: 8.3.6(typescript@5.4.5)
-      cosmiconfig-typescript-loader: 4.0.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@5.4.5))(ts-node@10.9.1(@types/node@20.5.1)(typescript@5.4.5))(typescript@5.4.5)
+      cosmiconfig-typescript-loader: 4.0.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@5.4.5))(ts-node@10.9.1(@types/node@18.7.14)(typescript@5.4.5))(typescript@5.4.5)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -6606,7 +6606,7 @@ snapshots:
   ahooks@3.8.0(react@18.3.1):
     dependencies:
       '@babel/runtime': 7.23.2
-      dayjs: 1.11.5
+      dayjs: 1.11.13
       intersection-observer: 0.12.2
       js-cookie: 2.2.1
       lodash: 4.17.21
@@ -6674,7 +6674,7 @@ snapshots:
       '@rc-component/trigger': 2.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       classnames: 2.5.1
       copy-to-clipboard: 3.3.3
-      dayjs: 1.11.11
+      dayjs: 1.11.13
       qrcode.react: 3.1.0(react@18.3.1)
       rc-cascader: 3.26.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       rc-checkbox: 3.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -6691,7 +6691,7 @@ snapshots:
       rc-motion: 2.9.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       rc-notification: 5.6.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       rc-pagination: 4.0.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      rc-picker: 4.5.0(dayjs@1.11.11)(moment@2.30.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      rc-picker: 4.5.0(dayjs@1.11.13)(moment@2.30.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       rc-progress: 4.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       rc-rate: 2.13.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       rc-resize-observer: 1.4.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -7265,19 +7265,19 @@ snapshots:
     dependencies:
       toggle-selection: 1.0.6
 
-  cosmiconfig-typescript-loader@4.0.0(@types/node@20.5.1)(cosmiconfig@8.1.3)(ts-node@10.9.1(@types/node@20.5.1)(typescript@5.4.5))(typescript@5.4.5):
+  cosmiconfig-typescript-loader@4.0.0(@types/node@20.5.1)(cosmiconfig@8.1.3)(ts-node@10.9.1(@types/node@18.7.14)(typescript@5.4.5))(typescript@5.4.5):
     dependencies:
       '@types/node': 20.5.1
       cosmiconfig: 8.1.3
-      ts-node: 10.9.1(@types/node@20.5.1)(typescript@5.4.5)
+      ts-node: 10.9.1(@types/node@18.7.14)(typescript@5.4.5)
       typescript: 5.4.5
     optional: true
 
-  cosmiconfig-typescript-loader@4.0.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@5.4.5))(ts-node@10.9.1(@types/node@20.5.1)(typescript@5.4.5))(typescript@5.4.5):
+  cosmiconfig-typescript-loader@4.0.0(@types/node@20.5.1)(cosmiconfig@8.3.6(typescript@5.4.5))(ts-node@10.9.1(@types/node@18.7.14)(typescript@5.4.5))(typescript@5.4.5):
     dependencies:
       '@types/node': 20.5.1
       cosmiconfig: 8.3.6(typescript@5.4.5)
-      ts-node: 10.9.1(@types/node@20.5.1)(typescript@5.4.5)
+      ts-node: 10.9.1(@types/node@18.7.14)(typescript@5.4.5)
       typescript: 5.4.5
 
   cosmiconfig@8.1.3:
@@ -7376,9 +7376,7 @@ snapshots:
       es-errors: 1.3.0
       is-data-view: 1.0.1
 
-  dayjs@1.11.11: {}
-
-  dayjs@1.11.5: {}
+  dayjs@1.11.13: {}
 
   debug@3.2.7:
     dependencies:
@@ -9837,7 +9835,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  rc-picker@4.5.0(dayjs@1.11.11)(moment@2.30.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  rc-picker@4.5.0(dayjs@1.11.13)(moment@2.30.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       '@babel/runtime': 7.24.7
       '@rc-component/trigger': 2.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -9848,7 +9846,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     optionalDependencies:
-      dayjs: 1.11.11
+      dayjs: 1.11.13
       moment: 2.30.1
 
   rc-progress@4.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
@@ -10794,7 +10792,6 @@ snapshots:
       typescript: 5.4.5
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
-    optional: true
 
   ts-node@10.9.1(@types/node@20.5.1)(typescript@5.4.5):
     dependencies:
@@ -11086,7 +11083,7 @@ snapshots:
       '@vitest/snapshot': 0.34.6
       '@vitest/spy': 0.34.6
       '@vitest/utils': 0.34.6
-      acorn: 8.10.0
+      acorn: 8.11.3
       acorn-walk: 8.2.0
       cac: 6.7.14
       chai: 4.3.10

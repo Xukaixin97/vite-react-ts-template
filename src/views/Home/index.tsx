@@ -3,7 +3,7 @@ import type { FC } from 'react'
 interface IProps { }
 
 const Home: FC<IProps> = () => {
-  const now = moment().format('YYYY/MM')
+  const now = dayjs().format('YYYY/MM')
 
   return (
     <div>

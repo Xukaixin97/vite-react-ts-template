@@ -9,7 +9,7 @@ export function configAutoImportPlugin() {
         'ahooks',
         'react-router-dom',
         {
-          moment: [['default', 'moment']],
+          moment: [['default', 'dayjs']],
         },
       ],
       dts: 'src/auto-imports.d.ts',
