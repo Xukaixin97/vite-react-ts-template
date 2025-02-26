@@ -8,6 +8,7 @@ const generateScopedName = '[local]___[hash:base64:5]'
 export default defineConfig(
   ({ mode }) => {
     return {
+      base: '/app/download/',
       define: {
         __DEV__: mode === 'development',
       },
@@ -47,6 +48,10 @@ export default defineConfig(
       //     },
       //   },
       // },
+
+      server: {
+        host: true,
+      },
     }
   },
 )
