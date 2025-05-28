@@ -1,61 +1,53 @@
-import Chart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
+import Chart from 'react-apexcharts'
 import { Flex } from 'antd'
 import BoxWrapper from './BoxWrapper'
 import typebg from '@/assets/dashboard/typebg.png'
 
-const types = ['年', '月']
+const types = ['日', '月']
 
-export default function VehicleCity() {
+export default function DeviceStatus() {
   const [type, setType] = useState(types[0])
 
   const [series] = useState<ApexAxisChartSeries>([{
-    name: '车辆统计',
-    data: [400, 430, 448, 470, 540].reverse(),
+    name: 'Net Profit',
+    data: [1, 2, 3, 4, 5, 4, 3],
   }])
 
   const [options] = useState<ApexOptions>({
     chart: {
       type: 'bar',
-      // height: 700,
+      // height: '100px',
+      // minHeight: 100,
       toolbar: {
         show: false,
       },
     },
     plotOptions: {
       bar: {
-        horizontal: true,
-        borderRadius: 3,
-        barHeight: '8px',
+        horizontal: false,
+        borderRadius: 5,
+        columnWidth: '10',
         borderRadiusApplication: 'end',
-        colors: {
-          backgroundBarColors: ['#1b394c'],
-          backgroundBarOpacity: 1,
-          backgroundBarRadius: 5,
-        },
       },
     },
     grid: {
       borderColor: '#4f5969',
       strokeDashArray: 3,
-      xaxis: {
-        lines: {
-          show: true,
-        },
-      },
-      yaxis: {
-        lines: {
-          show: false,
-        },
+      padding: {
+        left: 10,
+        right: 10,
+        top: 0,
+        bottom: 0,
       },
     },
     dataLabels: {
       enabled: false,
     },
     xaxis: {
-      categories: ['北京', '上海', '广州', '深圳', '成都'],
+      categories: ['05-01', '05-02', '05-03', '05-04', '05-05', '05-06', '05-07'],
       axisBorder: {
-        show: false,
+        show: true,
       },
       axisTicks: {
         show: false,
@@ -64,49 +56,48 @@ export default function VehicleCity() {
         show: true,
         style: {
           colors: 'white',
-          fontSize: '1.15vh',
+          fontSize: '1.3vh',
           fontFamily: 'D-DIN',
         },
       },
-
       tooltip: {
         enabled: false,
       },
     },
     yaxis: {
+      tickAmount: 5,
       labels: {
         show: true,
         style: {
           colors: 'white',
-          fontSize: '1.15vh',
+          fontSize: '1.3vh',
           fontFamily: 'D-DIN',
         },
       },
-
     },
 
     fill: {
       colors: ['#3FE8DB'],
       type: 'gradient',
       gradient: {
-        type: 'horizontal',
+        type: 'vertical',
         gradientToColors: ['#55FFE0'], // 颜色数组
-        opacityFrom: 0,
-        opacityTo: 1,
+        opacityFrom: 1,
+        opacityTo: 0,
         stops: [0, 100],
       },
     },
-    tooltip: {
-      // y: {
-      //   formatter(val: number) {
-      //     return `$ ${val} `
-      //   },
-      // },
-    },
+    // tooltip: {
+    //   y: {
+    //     formatter(val: number) {
+    //       return `$ ${val} thousands`
+    //     },
+    //   },
+    // },
   })
 
   return (
-    <BoxWrapper title="车型TOP 5">
+    <BoxWrapper title="活跃用户统计">
       <Flex className="absolute right-[6px] top-[6px]">
         {types.map((item) => {
           return (
@@ -127,9 +118,9 @@ export default function VehicleCity() {
         options={options}
         series={series}
         type="bar"
-        // width="100%"
-        height="80%"
-        className="w-full h-[16vh] !min-h-0"
+        width="100%"
+        height="82%"
+        className="w-full h-[20vh] !min-h-0"
       />
     </BoxWrapper>
   )

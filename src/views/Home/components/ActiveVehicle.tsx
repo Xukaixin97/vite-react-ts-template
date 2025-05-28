@@ -1,8 +1,14 @@
 import type { ApexOptions } from 'apexcharts'
 import Chart from 'react-apexcharts'
+import { Flex } from 'antd'
 import BoxWrapper from './BoxWrapper'
+import typebg from '@/assets/dashboard/typebg.png'
+
+const types = ['日', '月']
 
 export default function DeviceStatus() {
+  const [type, setType] = useState(types[0])
+
   const [series] = useState<ApexAxisChartSeries>([{
     name: 'Net Profit',
     data: [1, 2, 3, 4, 5, 4, 3],
@@ -11,7 +17,8 @@ export default function DeviceStatus() {
   const [options] = useState<ApexOptions>({
     chart: {
       type: 'bar',
-      height: 350,
+      // height: '100px',
+      // minHeight: 100,
       toolbar: {
         show: false,
       },
@@ -27,12 +34,18 @@ export default function DeviceStatus() {
     grid: {
       borderColor: '#4f5969',
       strokeDashArray: 3,
+      padding: {
+        left: 10,
+        right: 10,
+        top: 0,
+        bottom: 0,
+      },
     },
     dataLabels: {
       enabled: false,
     },
     xaxis: {
-      categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Oct', 'Oct'],
+      categories: ['05-01', '05-02', '05-03', '05-04', '05-05', '05-06', '05-07'],
       axisBorder: {
         show: true,
       },
@@ -43,21 +56,21 @@ export default function DeviceStatus() {
         show: true,
         style: {
           colors: 'white',
-          fontSize: '14px',
+          fontSize: '1.3vh',
           fontFamily: 'D-DIN',
         },
       },
-
       tooltip: {
         enabled: false,
       },
     },
     yaxis: {
+      tickAmount: 5,
       labels: {
         show: true,
         style: {
           colors: 'white',
-          fontSize: '14px',
+          fontSize: '1.3vh',
           fontFamily: 'D-DIN',
         },
       },
@@ -84,13 +97,30 @@ export default function DeviceStatus() {
   })
 
   return (
-    <BoxWrapper title="日活跃用户">
+    <BoxWrapper title="车辆激活统计">
+      <Flex className="absolute right-[6px] top-[6px]">
+        {types.map((item) => {
+          return (
+            <div
+              key={item}
+              className={`text-[8px] text-[#62748C] size-[14px] flex items-center justify-center mr-[1px] ${type === item ? 'text-[#fff]' : ''} cursor-pointer`}
+              onClick={() => setType(item)}
+              style={{
+                background: type === item ? `url(${typebg}) no-repeat center / 100% 100%` : 'linear-gradient( 180deg, rgba(48,83,106,0) 0%, rgba(48,83,106,0.5) 100%)',
+              }}
+            >
+              {item}
+            </div>
+          )
+        })}
+      </Flex>
       <Chart
         options={options}
         series={series}
         type="bar"
-        width="370"
-      // className="flex items-center h-[90%]"
+        width="100%"
+        height="82%"
+        className="w-full h-[20vh] !min-h-0"
       />
     </BoxWrapper>
   )

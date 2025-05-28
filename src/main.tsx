@@ -9,7 +9,7 @@ import 'antd/dist/reset.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <ClickToComponent />
+    <ClickToComponent editor="trae" />
     <BrowserRouter>
       <App />
     </BrowserRouter>

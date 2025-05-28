@@ -14,7 +14,7 @@ export default function CurrentTime() {
 
   return (
     <div
-      className="text-2xl absolute right-12 top-[3.3rem] text-white"
+      className="text-[1.2vw] absolute right-[2.9vw] top-[5vh] text-white"
       style={{
         background: 'linear-gradient(to bottom, #DDECF6, #6EC9FF)',
         WebkitBackgroundClip: 'text',

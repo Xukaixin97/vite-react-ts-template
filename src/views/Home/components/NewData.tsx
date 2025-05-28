@@ -1,8 +1,13 @@
 import Chart from 'react-apexcharts'
 import type { ApexOptions } from 'apexcharts'
+import { Flex } from 'antd'
 import BoxWrapper from './BoxWrapper'
 
+const types = ['日', '月']
+
 export default function NewData() {
+  const [type, setType] = useState(types[0])
+
   const [series] = useState<ApexAxisChartSeries>([{
     name: 'series1',
     data: [40, 40, 40, 40, 40, 40, 40],
@@ -100,6 +105,19 @@ export default function NewData() {
 
   return (
     <BoxWrapper title="新增数据">
+      <Flex className="absolute right-0 top-0">
+        {types.map((item) => {
+          return (
+            <div
+              key={item}
+              className={`text-[8px] text-[#94FFFF] font-['YouSheBiaoTiHei'] ${type === item ? 'text-[#70E5FF]' : ''} cursor-pointer`}
+              onClick={() => setType(item)}
+            >
+              {item}
+            </div>
+          )
+        })}
+      </Flex>
       <Chart
         options={options}
         series={series}
