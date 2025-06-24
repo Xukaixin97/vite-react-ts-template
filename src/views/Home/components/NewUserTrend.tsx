@@ -27,7 +27,7 @@ const options: ApexOptions = {
     strokeDashArray: 3,
     padding: {
       left: 10,
-      right: 10,
+      right: 0,
       top: 0,
       bottom: 0,
     },

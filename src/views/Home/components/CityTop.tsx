@@ -5,9 +5,9 @@ export default function VehicleCity() {
   return (
     <BoxWrapper title="用户城市TOP 10">
       <div className="px-[8px] py-[10px]">
-        {Array.from({ length: 10 }).map((item, index) => {
+        {Array.from({ length: 10 }).map((_item, index) => {
           return (
-            <Flex align="center" className="w-full mb-[3px]">
+            <Flex align="center" className="w-full mb-[3px]" key={index}>
               <div className="text-[8px] text-[#94FFFF] font-['YouSheBiaoTiHei'] pr-[7px] w-[20px]">
                 {(index + 1).toString().padStart(2, '0')}
               </div>

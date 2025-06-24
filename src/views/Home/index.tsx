@@ -8,6 +8,7 @@ import NewUserTrend from './components/NewUserTrend'
 import NewVehicleTrend from './components/NewVehicleTrend'
 import CityTop from './components/CityTop'
 import TotalSummary from './components/TotalSummary2'
+import BMAP from './components/Map'
 import BottomBg from '@/assets/dashboard/bottom_bg.png'
 import MainBg from '@/assets/dashboard/main_bg.png'
 
@@ -20,7 +21,7 @@ function Home() {
         background: `url(${MainBg}) no-repeat center / 100% 100%`,
       }}
     >
-      {/* <BMAP /> */}
+      <BMAP />
 
       <>
         <header className="w-full absolute top-0 left-0">
@@ -38,7 +39,7 @@ function Home() {
           {/* <NewData /> */}
         </section>
 
-        <section about="right panel" className="flex flex-col justify-between gap-[1.6vh]  w-auto  absolute top-[10.5vh] right-[14px] z-50">
+        <section about="right panel" className="flex flex-col justify-between gap-[1.3vh]  w-auto  absolute top-[10.5vh] right-[14px] z-50">
           <NewUserTrend />
           <ActiveUser />
           <CityTop />

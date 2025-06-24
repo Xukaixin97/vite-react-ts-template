@@ -10,7 +10,7 @@ const BMAP: FC<IProps> = () => {
     map.setMapStyleV2({
       styleId: 'd4fc9935a386752f493407d4785f02a8',
     })
-    map.centerAndZoom(new BMapGL.Point(116.404, 39.925), 6)
+    // map.centerAndZoom(new BMapGL.Point(116.404, 39.925), 8)
     // map.setMinZoom(4)
     // map.centerAndZoom(new BMapGL.Point(116.280190, 40.049191), 19)
     map.enableScrollWheelZoom()

@@ -8,6 +8,7 @@ const generateScopedName = '[local]___[hash:base64:5]'
 export default defineConfig(
   ({ mode }) => {
     return {
+      base: '/data-screen/',
       define: {
         __DEV__: mode === 'development',
       },

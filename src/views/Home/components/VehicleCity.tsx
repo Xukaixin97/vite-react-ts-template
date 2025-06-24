@@ -21,12 +21,14 @@ export default function VehicleCity() {
       toolbar: {
         show: false,
       },
+      redrawOnParentResize: true, // 父容器大小改变时重绘
+      redrawOnWindowResize: true, // 窗口
     },
     plotOptions: {
       bar: {
         horizontal: true,
-        borderRadius: 3,
-        barHeight: '8px',
+        borderRadius: 2,
+        barHeight: '5vh',
         borderRadiusApplication: 'end',
         colors: {
           backgroundBarColors: ['#1b394c'],
@@ -47,6 +49,12 @@ export default function VehicleCity() {
         lines: {
           show: false,
         },
+      },
+      padding: {
+        left: 10,
+        right: 1,
+        top: 0,
+        bottom: 2,
       },
     },
     dataLabels: {
@@ -127,7 +135,7 @@ export default function VehicleCity() {
         options={options}
         series={series}
         type="bar"
-        // width="100%"
+        width="100%"
         height="80%"
         className="w-full h-[16vh] !min-h-0"
       />
