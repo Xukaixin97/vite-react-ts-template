@@ -44,30 +44,30 @@ const Home: FC<IProps> = () => {
   const { styles } = useStyle()
   const [searchParams] = useSearchParams()
 
-  // if (!searchParams.get('url') || !searchParams.get('logo'))
-  //   return null
+  if (!searchParams.get('url') || !searchParams.get('logo'))
+    return null
 
   // 改标签页logo
-  // useEffect(() => {
-  //   const link = document.querySelector('link[rel~=\'icon\']')
-  //   if (link) {
-  //     // @ts-expect-error 123
-  //     link.href = searchParams.get('logo')!
-  //   }
-  //   else {
-  //     const newLink = document.createElement('link')
-  //     newLink.rel = 'icon'
-  //     newLink.href = searchParams.get('logo')!
-  //     document.head.appendChild(newLink)
-  //   }
-  // }, [searchParams]) // 监听 favicon 变化，自动更新
+  useEffect(() => {
+    const link = document.querySelector('link[rel~=\'icon\']')
+    if (link) {
+      // @ts-expect-error 123
+      link.href = searchParams.get('logo')!
+    }
+    else {
+      const newLink = document.createElement('link')
+      newLink.rel = 'icon'
+      newLink.href = searchParams.get('logo')!
+      document.head.appendChild(newLink)
+    }
+  }, [searchParams]) // 监听 favicon 变化，自动更新
 
   const handleDownload = () => {
     if (!searchParams.get('url'))
       return
     const a = document.createElement('a')
     a.style.display = 'none'
-    a.href = searchParams.get('url')!
+    a.href = `https://ibike.hikwuxi.com:58443/file/app/${searchParams.get('url')!}.apk`
     // a.download = `downloaded-file`
     a.rel = 'noopener noreferrer'
     document.body.append(a)
@@ -95,7 +95,7 @@ const Home: FC<IProps> = () => {
           !is_weixin() && (
             <>
               <img
-                src={searchParams.get('logo')!}
+                src={`https://ibike.hikwuxi.com:58443/file/picture/${searchParams.get('logo')!}`}
                 alt="logo"
                 className=" h-auto w-[60%] object-contain mt-[-30px]"
               />
